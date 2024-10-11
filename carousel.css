@@ -1,0 +1,41 @@
+#carousel {
+    position: relative;
+    overflow: hidden;
+    height: 800px; /* Set a fixed height for the carousel */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    min-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.carousel img:not(.active) {
+    display: none; /* Hide images that are not active */
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px;
+    transition: background 0.8s;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 1);
+}
